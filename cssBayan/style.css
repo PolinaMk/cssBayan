@@ -1,16 +1,15 @@
 html, body {
     height: 100%;
-  }
+}
 
 body {
     margin: 0;
-
     font-family: 'Prompt', sans-serif;
     font-size: 10px;
     color: #000000;
     -webkit-font-smoothing: antialiased;
 
-    background: linear-gradient(52.96deg, #E1DBE9 0%, #BFC3E8 100%) no-repeat;
+    background: linear-gradient(52.96deg, #E1DBE9 0%, #BFC3E8 100%) fixed;
 }
 
 *,
@@ -19,12 +18,18 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .wrapper {
+    height: 100%;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     text-align: left;
 }
+
 
 /* Header
 ===================*/
@@ -51,25 +56,67 @@ h2 {
 }
 
 .bayan {
-    padding: 1% 0;
     color: black;
-    border-bottom: 0.5px solid black;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.bayan:hover {
+.bayan_block {
+    padding: 1% 0;
+    border-bottom: 0.5px solid black;
+}
+
+.list:hover .bayan{
     color: #1D2ABB;
 }
 
-.bayan:hover .icon {
+.list:hover .icon {
     stroke: #1D2ABB;
+    display: block;
+}
+
+.bayan_block:hover .bayan__img {
+    display: block;
+    width: 50%;
+    padding: 2% 0;
+}
+
+.bayan__img {
+    display: none;
 }
 
 .icon {
     width: 50px;
     height: 50px;
-    stroke: black;
+    stroke: none;
 }
 
+/* Footer
+===================*/
+
+.footer {
+    padding: 10% 0 3%;
+    bottom: 0;
+}
+
+.logo-object {
+    height: 50px;
+    background-image: url("logo_rs/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 121px;
+    cursor: pointer;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer_content a {
+      color: black;
+}
