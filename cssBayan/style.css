@@ -148,7 +148,7 @@ h2 {
 ===================*/
 
 .footer {
-    padding: 10% 0 3%;
+    padding: 10% 0 3% 0;
     bottom: 0;
 }
 
@@ -157,7 +157,7 @@ h2 {
     background-image: url("logo_rs/rs_school_js.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 121px;
+    width: 20%;
     cursor: pointer;
 }
 
@@ -166,9 +166,71 @@ h2 {
     justify-content: center;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .Git_page {
     color: #1D2ABB;
+}
+
+
+@media (max-width: 1120px) {
+body {
+    font-size: 8px;
+}
+
+.wrapper {
+    max-width: 750px;
+}
+.bayan__img {
+    width: 60%;
+}
+}
+
+@media (max-width: 1120px) {
+body {
+    font-size: 8px;
+}
+
+.wrapper {
+    max-width: 280px;
+}
+
+.bayan__img {
+    width: 80%;
+}
+
+h2 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 1rem;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 600;
+    margin: 0;
+    font-size: 2rem;
+    color: #1D2ABB;
+    padding: 0;
+}
+
+.bayan_input[id^=item-]:checked~.image,
+.bayan_block:hover .image {
+    height: 100%;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    stroke: none;
+}
+
+.footer_content {
+    font-size: 0.7rem;
+}
+
+.logo-object {
+    height: 20px;
+}
 }
