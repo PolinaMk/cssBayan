@@ -134,8 +134,8 @@ h2 {
     height: 400px;
 }
 
-.image:active {
-    cursor: crosshair;
+.image, .bayan__img:active {
+    cursor: pointer;
 }
 
 .icon {
