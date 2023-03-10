@@ -60,11 +60,18 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
 }
 
 .bayan_block {
     padding: 1% 0;
     border-bottom: 0.5px solid black;
+}
+
+.bayan_block:last-child {
+    border-bottom: none;
 }
 
 .list:hover .bayan{
@@ -76,14 +83,59 @@ h2 {
     display: block;
 }
 
-.bayan_block:hover .bayan__img {
-    display: block;
-    width: 50%;
-    padding: 2% 0;
+.image {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  -ms-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+
+.image img {
+    transform: scale(0);
+    transition: 0.5s;
 }
 
 .bayan__img {
+    width: 50%;
+}
+
+.bayan_block:hover .icon{
+    stroke: #1D2ABB;
+    transform: rotate(-45deg);
+}
+
+.bayan_block:hover>.image .bayan__img {
+    transform: scale(1);
+  }
+
+.bayan_input[id^=item-]:checked~.image .bayan__img {
+    transform: scale(1);
+  }
+
+.bayan_input {
+    -webkit-appearance: none;
+    appearance: none;
     display: none;
+}
+
+.bayan_input[id^=item-]:checked~.image .bayan__img {
+    transform: scale(1);
+  }
+
+.bayan_input[id^=item-]:checked~.image,
+.bayan_block:hover .image {
+    height: 400px;
+}
+
+.image:active {
+    cursor: crosshair;
 }
 
 .icon {
@@ -117,6 +169,6 @@ h2 {
     font-size: 14px;
 }
 
-.footer_content a {
-      color: black;
+.Git_page {
+    color: #1D2ABB;
 }
