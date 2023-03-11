@@ -131,7 +131,7 @@ h2 {
 
 .bayan_input[id^=item-]:checked~.image,
 .bayan_block:hover .image {
-    height: 400px;
+    height: 100%;
 }
 
 .image, .bayan__img:active {
